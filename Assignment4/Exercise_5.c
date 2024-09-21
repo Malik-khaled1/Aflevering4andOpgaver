@@ -16,15 +16,13 @@ for (int i = 0; i < 20; i++) // Gennemløb count array
 
 
 srand(time(0)); // Initialiser generatoren
-// Generer et tilfældigt tal mellem 1 og 100
-int tilfældigt_tal = 1 + rand() % 20;
 
 //Gennemløb rækker og kolloner og indsæt tilfældige værdier mellem 1 og 20 inklusiv
 for (int row = 0; row < 100; row++)
 {
     for (int col = 0; col < 150; col++)
     {
-        a[row][col] = tilfældigt_tal;
+        a[row][col] = 1 + rand() % 20;
     }
     
 }
@@ -51,7 +49,7 @@ int main(void){
 int a[100][150];
 int count[20];
 
-count_1_to_20(a[100][150], count[20]);
+count_1_to_20(a, count);
 
     return 0;
 }
